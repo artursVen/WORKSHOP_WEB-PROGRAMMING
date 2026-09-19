@@ -4,6 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamlet, Act III, Scene I — William Shakespeare</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #252b32;
+            background: #f6f3ed;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .page-header,
+        main,
+        .page-footer {
+            width: min(100% - 2rem, 52rem);
+            margin-inline: auto;
+        }
+
+        .page-header {
+            padding-block: 3.5rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #d6d0c4;
+        }
+
+        h1 {
+            margin: 0 0 1rem;
+            font-size: clamp(1.9rem, 4vw, 2.8rem);
+            line-height: 1.2;
+        }
+
+        .author {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .author-dates {
+            margin: 0.25rem 0 0;
+            color: #62656a;
+        }
+
+        main {
+            padding-block: 2.5rem 3.5rem;
+        }
+
+        .poem {
+            padding: clamp(1.25rem, 4vw, 2.5rem);
+            background: #fffdf9;
+            border: 1px solid #e6dfd3;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.6rem 2rem rgb(39 35 29 / 5%);
+        }
+
+        .poem-text {
+            margin: 0;
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            line-height: 1.9;
+        }
+
+        .page-footer {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+            gap: 2rem;
+            padding-block: 2rem 3rem;
+            border-top: 1px solid #d6d0c4;
+        }
+
+        .page-footer h2 {
+            margin: 0 0 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        address {
+            color: #62656a;
+            font-style: normal;
+        }
+
+        .page-footer ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .page-footer button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            color: #33465c;
+            background: #fffdf9;
+            border: 1px solid #c8cfd5;
+            border-radius: 0.35rem;
+            font: inherit;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .page-footer button svg {
+            width: 1.1rem;
+            height: 1.1rem;
+            flex: none;
+            fill: currentColor;
+        }
+
+        .social-button--facebook svg {
+            color: #1877f2;
+        }
+
+        .social-button--twitter svg {
+            color: #1d9bf0;
+        }
+
+        .social-button--tumblr svg {
+            color: #36465d;
+        }
+
+        .page-footer button:hover {
+            background: #e8eef3;
+        }
+
+        .page-footer button:focus-visible {
+            outline: 2px solid #295581;
+            outline-offset: 2px;
+        }
+
+        @media (max-width: 600px) {
+            .page-header {
+                padding-block: 2.5rem 1.5rem;
+            }
+
+            main {
+                padding-block: 1.5rem 2.5rem;
+            }
+
+            .page-footer {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            :root {
+                background: white;
+            }
+
+            .poem {
+                padding: 0;
+                border: 0;
+                box-shadow: none;
+            }
+
+            .page-footer {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="page-header">
@@ -55,20 +219,41 @@
     <footer class="page-footer">
         <section aria-labelledby="contact-heading">
             <h2 id="contact-heading">Contact</h2>
-            <address>Contact details to be added.</address>
+            <address>+371 12345678</address>
         </section>
 
         <nav aria-label="Additional options">
             <h2>Additional options</h2>
             <ul>
-                <li><button type="button">Share on Facebook</button></li>
-                <li><button type="button">Share on Twitter</button></li>
-                <li><button type="button">Share on Tumblr</button></li>
+                <li>
+                    <button class="social-button--facebook" type="button">
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+                            <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4V10H7.5v3h2.6v8z"/>
+                        </svg>
+                        <span>Share on Facebook</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="social-button--twitter" type="button">
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+                            <path d="M23.95 4.57a10 10 0 0 1-2.82.77 4.93 4.93 0 0 0 2.16-2.72 9.9 9.9 0 0 1-3.12 1.19 4.92 4.92 0 0 0-8.39 4.49A13.94 13.94 0 0 1 1.64 3.16a4.92 4.92 0 0 0 1.52 6.56A4.9 4.9 0 0 1 .96 9.11v.06a4.92 4.92 0 0 0 3.95 4.82 4.94 4.94 0 0 1-2.23.08 4.93 4.93 0 0 0 4.61 3.42A9.87 9.87 0 0 1 .01 19.53a13.93 13.93 0 0 0 7.55 2.21c9.06 0 14.01-7.5 14.01-14.01 0-.21 0-.42-.02-.63A10 10 0 0 0 24 4.56z"/>
+                        </svg>
+                        <span>Share on Twitter</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="social-button--tumblr" type="button">
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+                            <path d="M10 2h4v5h5v4h-5v6.1c0 1.2.6 1.7 1.6 1.7.8 0 1.6-.2 2.4-.6v3.5c-1 .5-2.2.7-3.4.7-3.2 0-4.6-1.7-4.6-4.7V11H7V8c2.1-.6 3-2.2 3-6z"/>
+                        </svg>
+                        <span>Share on Tumblr</span>
+                    </button>
+                </li>
                 <li><button type="button">View print mode</button></li>
                 <li><button type="button">Copy embed code</button></li>
                 <li><button type="button">Add this poem to an anthology</button></li>
             </ul>
         </nav>
-    </footer>
+    </footer> 
 </body>
 </html>
