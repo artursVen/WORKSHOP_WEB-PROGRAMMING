@@ -110,6 +110,18 @@
             fill: currentColor;
         }
 
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            color: #33465c;
+            background: #fffdf9;
+            border: 1px solid #c8cfd5;
+            border-radius: 0.35rem;
+            text-decoration: none;
+        }
+
         .social-button--facebook svg {
             color: #1877f2;
         }
